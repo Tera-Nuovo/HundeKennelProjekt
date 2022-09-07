@@ -9,7 +9,7 @@ namespace HundKenneProjekt
 
         static public void RunMainMenu()
         {
-            while(state != "quit")
+            while (state != "quit")
             {
                 SetState(Console.ReadLine());
 
@@ -29,18 +29,18 @@ namespace HundKenneProjekt
             }
         }
 
-        static private void InterpretInput(string input)
+        static private void ReactToState()
         {
-            switch (input)
+            switch (state)
             {
                 case "search":
-                    state = "search";
+                    //SearchSpecifier.RequestDogList();
                     break;
                 case "quit":
                     state = "quit";
                     break;
                 default:
-                    state = "wrong input";
+                    WrongInputMessage();
                     break;
             }
 
@@ -61,6 +61,11 @@ namespace HundKenneProjekt
                     break;
             }
 
+        }
+
+        static private void WrongInputMessage()
+        {
+            Console.WriteLine("Inputet kunne ikke læses. Prøv igen.");
         }
     }
 }
