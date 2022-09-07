@@ -26,8 +26,8 @@ namespace HundKenneProjekt
         [Name("HDindex")]
         public string HDIndex { get; set; }
         [Name("SP")]
-        public int backInfo { get; set; }
+        public string backInfo { get; set; }
         [Name("HZ")]
-        public int HeartInfo { get; set; }
+        public string HeartInfo { get; set; }
     }
 }
