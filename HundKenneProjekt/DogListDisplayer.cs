@@ -1,13 +1,26 @@
-﻿using System;
+﻿using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using System.Data;
+using CsvHelper;
+using System.Globalization;
+using CsvHelper.Configuration;
+using CsvHelper.Configuration.Attributes;
 
-public class DogListDisplayer
+namespace HundKenneProjekt
 {
-	public DogListDisplayer()
+	public class DogListDisplayer
 	{
-		List<int> doglist = new List<int>
-		{ 1, 2, 3, 4, 5, 6,};
+		public void DisplayDogList()
+		{
+			List<double> displaydoglist = new List<double>()
+			{ 1, 2, 3, 4, 5, 6};
+				
 
-		Console.WriteLine(doglist);
-		Console.ReadKey();
+			Console.WriteLine(displaydoglist);
+
+			Console.ReadKey();
+		}
 	}
 }
