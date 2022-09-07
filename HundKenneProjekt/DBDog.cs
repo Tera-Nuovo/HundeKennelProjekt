@@ -1,8 +1,10 @@
 ﻿using System;
 
-public class Class1
+public class DBDog
 {
-	public Class1()
+	public DBDog()
 	{
+
+		Console.ReadKey();
 	}
 }

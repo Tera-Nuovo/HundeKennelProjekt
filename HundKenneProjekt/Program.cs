@@ -6,7 +6,7 @@ namespace First_Program
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
