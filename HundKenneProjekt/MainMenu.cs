@@ -1,10 +1,21 @@
 ﻿using System;
 namespace HundKenneProjekt
 {
-    public class MainMenu
+    static public class MainMenu
     {
-        public MainMenu()
+        static private String state = "start";
+
+        static public void RunMainMenu()
         {
+            while(state != "quit")
+            {
+                string input = Console.ReadLine();
+
+                if(state == "search")
+                {
+                    //SearchSpecifier.RequestDogList();
+                }
+            }
         }
     }
 }
