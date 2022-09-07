@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace First_Program
+namespace HundKenneProjekt
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
+
+            Console.ReadLine();
         }
     }
 }

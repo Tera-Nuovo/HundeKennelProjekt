@@ -15,7 +15,7 @@ namespace HundKenneProjekt
     {
         public List<Dog> GetDogsFromDatabase()
         {
-            using (var streamReader = new StreamReader(@"\Database\HundeData.csv"))
+            using (var streamReader = new StreamReader(@"..\..\..\Database\HundeData.csv"))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
