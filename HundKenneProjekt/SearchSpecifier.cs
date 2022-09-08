@@ -65,7 +65,7 @@ namespace HundKenneProjekt
             
             input = Console.ReadLine();
 
-            while (input != "hf" || input != "lf")
+            while (input != "hf" && input != "lf")
             {
                 Console.WriteLine("Kunne ikke læses. Prøv igen.");
                 Console.WriteLine("Specificer prioritet:");
@@ -90,7 +90,7 @@ namespace HundKenneProjekt
             {
                 Console.WriteLine("Kunne ikke læses. Prøv igen.");
                 Console.WriteLine("Specificer sorteingskategori:");
-                Console.WriteLine("HD-Index = \"1\"");
+                Console.WriteLine("HD-Index = \"hd-index\"");
                 input = Console.ReadLine();
             }
 
