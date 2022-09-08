@@ -20,7 +20,7 @@ namespace HundKenneProjekt
         public override string Sex { get; set; }
         public override string Hips { get; set; }
         public override string HDIndex { get; set; }
-        public override string backInfo { get; set; }
+        public override string BackInfo { get; set; }
         public override string HeartInfo { get; set; }
     }
 }

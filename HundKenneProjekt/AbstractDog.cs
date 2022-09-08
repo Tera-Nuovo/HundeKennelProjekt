@@ -9,7 +9,7 @@ namespace HundKenneProjekt
         public abstract string Sex { get; set; }
         public abstract string Hips { get; set; }
         public abstract string HDIndex { get; set; }
-        public abstract string backInfo { get; set; }
+        public abstract string BackInfo { get; set; }
         public abstract string HeartInfo { get; set; }
     }
 }

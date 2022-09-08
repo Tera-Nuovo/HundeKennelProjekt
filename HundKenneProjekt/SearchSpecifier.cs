@@ -1,34 +1,42 @@
 ﻿using System;
 namespace HundKenneProjekt
 {
-    static public class SearchSpecifier
+    public class SearchSpecifier
     {
-        //Ikke færdig!
-        static public void RequestDogList()
-        {
+        int Max { get; set; }
+        int Min { get; set; }
+        string Categori { get; set; }
+        string Priority { get; set; }
 
+        static public SearchSpecifier RequestDogList()
+        {
+            SearchSpecifier SS = new SearchSpecifier();
+            SS.GetMax();
+            SS.GetMin();
+            SS.GetCategori();
+            SS.GetPriority();
+
+            return SS;
         }
 
-        static private int GetMax()
+        private void GetMax()
         {
             string input;
             int max;
             Console.WriteLine("Specificer max værdi");
             input = Console.ReadLine();
 
-            if (int.TryParse(input, out max))
+            while (!int.TryParse(input, out max))
             {
-                return max;
-            } else
-            {
-                return -1;
+                Console.WriteLine("Kunne ikke læses. Prøv igen.");
+                Console.WriteLine("Specificer max værdi");
+                input = Console.ReadLine();
             }
 
-
-            
+            this.Max = max;
         }
 
-        static private int GetMin()
+        private void GetMin()
         {
             string input;
             int min;
@@ -36,55 +44,68 @@ namespace HundKenneProjekt
             Console.WriteLine("Specificer minimum værdi");
             input = Console.ReadLine();
 
-            if (int.TryParse(input, out min))
+            while (!int.TryParse(input, out min))
             {
-                return min;
+                Console.WriteLine("Kunne ikke læses. Prøv igen.");
+                Console.WriteLine("Specificer minimum værdi");
+                input = Console.ReadLine();
             }
-            else
-            {
-                return -1;
-            }
+
+            this.Min = min;
         }
 
-        static private string GetPriority()
+        private void GetPriority()
         {
    
-            string priority;
+            string input;
 
-            Console.WriteLine("Specificer om listen skal sortes med højeste værdig øverst eller laveste værdi øverst.");
+            Console.WriteLine("Specificer prioritet:");
+            Console.WriteLine("Højeste værdi først =\"hf\"");
+            Console.WriteLine("Laveste værdi først =\"lf\"");
+            
+            input = Console.ReadLine();
 
-            priority = Console.ReadLine();
-            if(priority == "hf")
+            while (input != "hf" || input != "lf")
             {
-                return "hf";
-            } else
-            {
-                return "";
+                Console.WriteLine("Kunne ikke læses. Prøv igen.");
+                Console.WriteLine("Specificer prioritet:");
+                Console.WriteLine("Højeste værdi først =\"hf\"");
+                Console.WriteLine("Laveste værdi først =\"lf\"");
+                input = Console.ReadLine();
             }
 
-
-
-
+            this.Priority = input;
         }
 
-        static private string GetCategori()
+        private void GetCategori()
         {
-            string categori;
+            string input;
 
-            Console.WriteLine("Specificer sorteingskategori");
+            Console.WriteLine("Specificer sorteingskategori:");
+            Console.WriteLine("HD-Index = \"hd-index\"");
 
-            categori = Console.ReadLine();
+            input = Console.ReadLine();
 
-            Console.WriteLine("Specificer om listen skal sortes med højeste værdig øverst eller laveste værdi øverst.");
-
-            if ("hf" == "hf")
+            while (!DoesStringMatchOptions(input))
             {
-                return "hf";
+                Console.WriteLine("Kunne ikke læses. Prøv igen.");
+                Console.WriteLine("Specificer sorteingskategori:");
+                Console.WriteLine("HD-Index = \"1\"");
+                input = Console.ReadLine();
             }
 
+            this.Priority = input;
+        }
 
-
-
+        private bool DoesStringMatchOptions(string input)
+        {
+            switch (input)
+            {
+                case "hd-index":
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }

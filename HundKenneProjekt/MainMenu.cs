@@ -16,7 +16,7 @@ namespace HundKenneProjekt
                 switch (state)
                 {
                     case "search":
-                        //SearchSpecifier.RequestDogList();
+                        SearchSpecifier.RequestDogList();
                         break;
                     case "quit":
                         state = "quit";

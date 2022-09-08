@@ -25,7 +25,7 @@ namespace HundKenneProjekt
         [Name("HDindex")]
         public override string HDIndex { get; set; }
         [Name("SP")]
-        public override string backInfo { get; set; }
+        public override string BackInfo { get; set; }
         [Name("HZ")]
         public override string HeartInfo { get; set; }
         3
