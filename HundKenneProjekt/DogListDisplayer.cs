@@ -8,6 +8,8 @@ using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
 using System.Net.Http.Headers;
+using System.Collections.Generic;
+
 
 namespace HundKenneProjekt
 {

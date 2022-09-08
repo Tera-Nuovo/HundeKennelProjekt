@@ -7,6 +7,8 @@ using CsvHelper;
 using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
+using System.Collections.Generic;
+
 
 
 namespace HundKenneProjekt
@@ -15,11 +17,11 @@ namespace HundKenneProjekt
     {
         public List<AbstractDog> GetDogsFromDatabase()
         {
-            using (var streamReader = new StreamReader(@"..\..\..\Database\HundeData.csv"))
+            using (var streamReader = new StreamReader(@"../../../Database/HundeData.csv"))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    Delimiter = ";"
+                    Delimiter = "; "
                 };
                 using (var csvReader = new CsvReader(streamReader, csvConfig))
                 {
