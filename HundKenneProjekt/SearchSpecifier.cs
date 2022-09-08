@@ -98,7 +98,7 @@ namespace HundKenneProjekt
                 input = Console.ReadLine();
             }
 
-            this.Priority = input;
+            this.Category = input;
         }
 
         private bool DoesStringMatchOptions(string input)
