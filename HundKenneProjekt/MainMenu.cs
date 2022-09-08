@@ -5,7 +5,7 @@ namespace HundKenneProjekt
 {
     public class MainMenu
     {
-        static private String state = "start";
+        private String state = "start";
         DogListManager DLMan = new DogListManager();
         DogListDisplayer DLDisplayer = new DogListDisplayer();
 
@@ -35,7 +35,7 @@ namespace HundKenneProjekt
 
         }
 
-        static private void SetState(string input)
+        private void SetState(string input)
         {
             switch (input)
             {
@@ -52,7 +52,7 @@ namespace HundKenneProjekt
 
         }
 
-        static private void WrongInputMessage()
+        private void WrongInputMessage()
         {
             Console.WriteLine("Inputet kunne ikke læses. Prøv igen.");
         }
