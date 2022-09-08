@@ -7,18 +7,47 @@ using CsvHelper;
 using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
+using System.Net.Http.Headers;
 
 namespace HundKenneProjekt
 {
 	public class DogListDisplayer
 	{
-		public void DisplayDogList()
-		{
-			List<double> displaydoglist = new List<double>()
-			{ 1, 2, 3, 4, 5, 6};
-				
 
-			Console.WriteLine(displaydoglist);
+		public void DisplayDogList(List<Dog> doglist)
+		{
+			List<Dog> displaydoglist = new List<Dog>();
+			string curdir = Directory.GetCurrentDirectory();
+			string filename = @"..\..\..\Database\HundeData.csv";
+
+			string[] linesInFile = File.ReadAllLines(filename);
+			string[] DogDetails = new string[0]; 
+
+			for (int i = 0; i < linesInFile.Length; i++)
+			{
+				string currentDog1 = linesInFile[i];
+				DogDetails = currentDog1.Split(',');
+
+				foreach (var p in DogDetails)
+				{
+					Dog dog = new Dog();
+					{
+						dog.ID = p;
+					};
+					displaydoglist.Add(dog);
+				}
+
+			}
+
+            /*DogDBManager DBman = new DogDBManager();
+            List<Dog> testList = DBman.GetDogsFromDatabase();
+            DogListDisplayer testDisplayer = new DogListDisplayer();
+            testDisplayer.DisplayDogList(testList);
+
+            Console.ReadLine();
+			*/
+
+            Console.WriteLine(displaydoglist);
 
 			Console.ReadKey();
 		}
