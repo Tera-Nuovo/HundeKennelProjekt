@@ -28,6 +28,6 @@ namespace HundKenneProjekt
         public override string BackInfo { get; set; }
         [Name("HZ")]
         public override string HeartInfo { get; set; }
-        3
+        
     }
 }
