@@ -12,13 +12,23 @@ namespace HundKenneProjekt
 {
     public class DogListManager
     {
-        public IDogDBManager dbManager = new DogDBManager();
+        public IDogDBManager dbManager;
+        public List<AbstractDog> CurentDogList;
         
         
 
-        public DogListManager()
+        public DogListManager(IDogDBManager dbManager)
         {
-            
+            this.dbManager = dbManager;
+        }
+
+        public void SortDogList(SearchSpecifier SS)
+        {
+            //sort dogs
+            //SS.Max = int 
+            //SS.Min = int
+            //SS.Categori = string "hd-index"
+            //SS.Priority = string  "hf" or "lf"
         }
 
         ///Seach Funktion Via Index
