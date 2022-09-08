@@ -22,7 +22,7 @@ namespace HundKenneProjekt
                 Console.WriteLine(Dog.ID);
                 Console.WriteLine(Dog.Sex);
                 Console.WriteLine(Dog.HDIndex);
-                Console.WriteLine(Dog.backInfo);
+                Console.WriteLine(Dog.BackInfo);
                 Console.WriteLine(Dog.HeartInfo);
 
             }
