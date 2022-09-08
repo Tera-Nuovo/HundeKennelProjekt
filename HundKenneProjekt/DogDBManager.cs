@@ -17,12 +17,11 @@ namespace HundKenneProjekt
     {
         public List<AbstractDog> GetDogsFromDatabase()
         {
-            //@"../../../Database/HundeData.csv"
-            using (var streamReader = new StreamReader(@"..\..\..\Database\HundeData.csv"))
+            using (var streamReader = new StreamReader(@"../../../Database/HundeData.csv"))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    Delimiter = ";"
+                    Delimiter = "; "
                 };
                 using (var csvReader = new CsvReader(streamReader, csvConfig))
                 {
