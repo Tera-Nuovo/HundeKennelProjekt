@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Text;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.IO;
 using System.Data;
@@ -12,8 +13,8 @@ namespace HundKenneProjekt
 {
     public class DogListManager
     {
-        public IDogDBManager dbManager;
-        public List<AbstractDog> CurentDogList;
+        public DogDBManager dbManager;
+        public List<AbstractDog> CurentDogList = new List<AbstractDog>();
 
         public void RequestRemoveSort(SearchSpecifier SS)
         {
@@ -30,15 +31,16 @@ namespace HundKenneProjekt
         void RemoveUnqualifiedDogs(SearchSpecifier SS)
         {
             // her fjerne vi kun hund der ikke lever op til kriterierne.
-            foreach(AbstractDog dogs in this.CurentDogList)
+            foreach(AbstractDog dogs in this.CurentDogList.ToList())
             {
                 double.TryParse(dogs.HDIndex, out double dogsIndex);
 
                 if(dogsIndex < SS.Min || dogsIndex > SS.Max)
                 {
-                    this.CurentDogList.Remove(dogs);
+                    CurentDogList.Remove(dogs);
                 }
             }
+            
         }
 
         public void SortDogList(SearchSpecifier SS)
