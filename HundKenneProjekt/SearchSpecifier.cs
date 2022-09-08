@@ -12,7 +12,7 @@ namespace HundKenneProjekt
         public string Category { get; set; }
         public string Priority { get; set; }
 
-        static public SearchSpecifier RequestDogList()
+        static public SearchSpecifier GetSearchSpecifier()
         {
             SearchSpecifier SS = new SearchSpecifier();
             SS.GetMax();

@@ -7,19 +7,24 @@ namespace HundKenneProjekt
 {
     public class MainMenu
     {
-        private String state = "start";
+        private string state = "start";
         DogListManager DLMan = new DogListManager();
         DogListDisplayer DLDisplayer = new DogListDisplayer();
 
         public void RunMainMenu()
         {
-            Console.WriteLine("Skriv search for at søge");
-            Console.WriteLine("Skriv quit for at stoppe");
+            WriteStartText();
             while (state != "quit")
             {
                 SetState(Console.ReadLine());
                 ReactToState();
             }
+        }
+
+        void WriteStartText()
+        {
+            Console.WriteLine("Skriv search for at søge");
+            Console.WriteLine("Skriv quit for at stoppe");
         }
 
         private void ReactToState()
@@ -62,7 +67,7 @@ namespace HundKenneProjekt
 
         void Search()
         {
-            DLMan.RequestRemoveSort(SearchSpecifier.RequestDogList());
+            DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier());
             DLDisplayer.DisplayDogList(DLMan.CurentDogList);
 
         }

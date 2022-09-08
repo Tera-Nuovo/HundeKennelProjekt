@@ -20,12 +20,13 @@ namespace HundKenneProjekt
 			
 			foreach (AbstractDog Dog in DBDogList)
 			{
-                Console.WriteLine(Dog.Name);
-                Console.WriteLine(Dog.ID);
-                Console.WriteLine(Dog.Sex);
-                Console.WriteLine(Dog.HDIndex);
-                Console.WriteLine(Dog.BackInfo);
-                Console.WriteLine(Dog.HeartInfo + "\n");
+                Console.Write("Navn: " + Dog.Name + " || ");
+                Console.Write("ID: " + Dog.ID + " || ");
+                Console.Write("Køn: " + Dog.Sex + " || ");
+                Console.Write("HD: " + Dog.Hips + " || ");
+                Console.Write("HD Index: " + Dog.HDIndex + " ||  ");
+                Console.Write("Ryg Grad: " + Dog.BackInfo + " | | ");
+                Console.Write("Hjerte Grad: " + Dog.HeartInfo + "\n\n");
 
             }
 
