@@ -25,7 +25,7 @@ namespace HundKenneProjekt
                 Console.Write("Køn: " + Dog.Sex + " || ");
                 Console.Write("HD Index: " + Dog.HDIndex + " ||  ");
                 Console.Write("Ryg Grad: " + Dog.BackInfo + " | | ");
-                Console.Write("Hjerte Grad: " + Dog.HeartInfo + "\n");
+                Console.Write("Hjerte Grad: " + Dog.HeartInfo + "\n\n");
 
             }
 
