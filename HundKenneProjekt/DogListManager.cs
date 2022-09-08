@@ -14,21 +14,42 @@ namespace HundKenneProjekt
     {
         public IDogDBManager dbManager;
         public List<AbstractDog> CurentDogList;
-        
-        
+        public bool Ready = false;
 
-        public DogListManager(IDogDBManager dbManager)
+        public void RequestRemoveSort(SearchSpecifier SS)
         {
-            this.dbManager = dbManager;
+            RequestDogsFromDatabase();
+            RemoveUnqualifiedDogs(SS);
+            SortDogList(SS);
+            Ready = true;
+        }
+
+        public DogListManager()
+        {
+            this.dbManager = new DogDBManager();
+        }
+
+        void RemoveUnqualifiedDogs(SearchSpecifier SS)
+        {
+            // her fjerne vi kun hund der ikke lever op til kriterierne.
         }
 
         public void SortDogList(SearchSpecifier SS)
         {
+            
             //sort dogs
-            //SS.Max = int 
+
+            // her ændres kun på rækkefølgen af listen
+
+            //SS.Max det er en int 
             //SS.Min = int
             //SS.Categori = string "hd-index"
             //SS.Priority = string  "hf" or "lf"
+        }
+
+        public void RequestDogsFromDatabase()
+        {
+            CurentDogList = dbManager.GetDogsFromDatabase();
         }
 
         ///Seach Funktion Via Index
