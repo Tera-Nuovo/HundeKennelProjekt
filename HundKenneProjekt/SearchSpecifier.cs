@@ -5,7 +5,7 @@ namespace HundKenneProjekt
     {
         double Max { get; set; }
         double Min { get; set; }
-        string Categori { get; set; }
+        string Category { get; set; }
         string Priority { get; set; }
 
         static public SearchSpecifier RequestDogList()
