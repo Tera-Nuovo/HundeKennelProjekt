@@ -12,7 +12,7 @@ namespace HundKenneProjekt
 {
     public class DogListManager
     {
-        public DogDBManager dbManager = new DogDBManager();
+        public IDogDBManager dbManager = new DogDBManager();
         
         
 
@@ -39,9 +39,9 @@ namespace HundKenneProjekt
         }
 
         //Sort Dog and make ready
-        public List<Dog> HdIndexSortedList(List<Dog> dogs)
+        public List<AbstractDog> HdIndexSortedList(List<AbstractDog> dogs)
         {
-            List<Dog> IndexSortedList = dogs.OrderBy(o=>o.HDIndex).Reverse().ToList();
+            List<AbstractDog> IndexSortedList = dogs.OrderBy(o=>o.HDIndex).Reverse().ToList();
             return IndexSortedList;
         }
     }

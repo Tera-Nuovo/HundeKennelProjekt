@@ -15,19 +15,19 @@ namespace HundKenneProjekt
     public class DBDog : AbstractDog
     {
         [Name("navn")]
-        public string Name { get; set; }
+        public override string Name { get; set; }
         [Name("ID")]
-        public string ID { get; set; }
+        public override string ID { get; set; }
         [Name("sex")]
-        public string Sex { get; set; }
+        public override string Sex { get; set; }
         [Name("HD")]
-        public string Hips { get; set; }
+        public override string Hips { get; set; }
         [Name("HDindex")]
-        public string HDIndex { get; set; }
+        public override string HDIndex { get; set; }
         [Name("SP")]
-        public string backInfo { get; set; }
+        public override string backInfo { get; set; }
         [Name("HZ")]
-        public string HeartInfo { get; set; }
-
+        public override string HeartInfo { get; set; }
+        3
     }
 }

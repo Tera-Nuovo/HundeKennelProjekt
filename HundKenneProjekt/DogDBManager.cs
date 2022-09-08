@@ -11,7 +11,7 @@ using CsvHelper.Configuration.Attributes;
 
 namespace HundKenneProjekt
 {
-    public class DogDBManager
+    public class DogDBManager : IDogDBManager
     {
         public List<AbstractDog> GetDogsFromDatabase()
         {
