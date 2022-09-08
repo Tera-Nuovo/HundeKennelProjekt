@@ -3,41 +3,30 @@ using System.Linq.Expressions;
 
 namespace HundKenneProjekt
 {
-    static public class MainMenu
+    public class MainMenu
     {
         static private String state = "start";
+        DogListManager DLMan = new DogListManager();
+        DogListDisplayer DLDisplayer = new DogListDisplayer();
 
-        static public void RunMainMenu()
+        public void RunMainMenu()
         {
             while (state != "quit")
             {
                 SetState(Console.ReadLine());
-
-                switch (state)
-                {
-                    case "search":
-                        SearchSpecifier.RequestDogList();
-                        break;
-                    case "quit":
-                        state = "quit";
-                        break;
-                    default:
-                        state = "wrong input";
-                        break;
-                }
+                ReactToState();
 
             }
         }
 
-        static private void ReactToState()
+        private void ReactToState()
         {
             switch (state)
             {
                 case "search":
-                    //SearchSpecifier.RequestDogList();
+                    Search();
                     break;
                 case "quit":
-                    state = "quit";
                     break;
                 default:
                     WrongInputMessage();
@@ -66,6 +55,13 @@ namespace HundKenneProjekt
         static private void WrongInputMessage()
         {
             Console.WriteLine("Inputet kunne ikke læses. Prøv igen.");
+        }
+
+        void Search()
+        {
+            DLMan.RequestRemoveSort(SearchSpecifier.RequestDogList());
+            //DLDisplayer.DisplayDogList(DLMan.CurentDogList);
+
         }
     }
 }
