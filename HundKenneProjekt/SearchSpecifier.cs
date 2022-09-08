@@ -3,8 +3,8 @@ namespace HundKenneProjekt
 {
     public class SearchSpecifier
     {
-        int Max { get; set; }
-        int Min { get; set; }
+        double Max { get; set; }
+        double Min { get; set; }
         string Categori { get; set; }
         string Priority { get; set; }
 
@@ -22,11 +22,11 @@ namespace HundKenneProjekt
         private void GetMax()
         {
             string input;
-            int max;
+            double max;
             Console.WriteLine("Specificer max værdi");
             input = Console.ReadLine();
 
-            while (!int.TryParse(input, out max))
+            while (!double.TryParse(input, out max))
             {
                 Console.WriteLine("Kunne ikke læses. Prøv igen.");
                 Console.WriteLine("Specificer max værdi");
@@ -39,12 +39,12 @@ namespace HundKenneProjekt
         private void GetMin()
         {
             string input;
-            int min;
+            double min;
 
             Console.WriteLine("Specificer minimum værdi");
             input = Console.ReadLine();
 
-            while (!int.TryParse(input, out min))
+            while (!double.TryParse(input, out min))
             {
                 Console.WriteLine("Kunne ikke læses. Prøv igen.");
                 Console.WriteLine("Specificer minimum værdi");
