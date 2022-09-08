@@ -11,9 +11,9 @@ using CsvHelper.Configuration.Attributes;
 
 namespace HundKenneProjekt
 {
-    public class DogDBManager : IDogDBManager
+    public class DogDBManager
     {
-        public List<AbstractDog> GetDogsFromDatabase()
+        public override List<AbstractDog> GetDogsFromDatabase()
         {
             using (var streamReader = new StreamReader(@"..\..\..\Database\HundeData.csv"))
             {

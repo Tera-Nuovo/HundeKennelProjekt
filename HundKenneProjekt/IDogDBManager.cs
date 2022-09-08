@@ -1,7 +1,7 @@
 ﻿using System;
 namespace HundKenneProjekt
 {
-    public interface IDogDBManager
+    public interface IDogDBManager : DogDBManager
     {
         public List<AbstractDog> GetDogsFromDatabase();
     }

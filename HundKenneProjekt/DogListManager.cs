@@ -30,13 +30,13 @@ namespace HundKenneProjekt
         void RemoveUnqualifiedDogs(SearchSpecifier SS)
         {
             // her fjerne vi kun hund der ikke lever op til kriterierne.
-            foreach(AbstractDog dogs in CurentDogList)
+            foreach(AbstractDog dogs in this.CurentDogList)
             {
                 double.TryParse(dogs.HDIndex, out double dogsIndex);
 
                 if(dogsIndex < SS.Min || dogsIndex > SS.Max)
                 {
-                    CurentDogList.Remove(dogs);
+                    this.CurentDogList.Remove(dogs);
                 }
             }
         }
