@@ -13,13 +13,18 @@ namespace HundKenneProjekt
 
         public void RunMainMenu()
         {
-            Console.WriteLine("Skriv search for at søge");
-            Console.WriteLine("Skriv quit for at stoppe");
+            WriteStartText();
             while (state != "quit")
             {
                 SetState(Console.ReadLine());
                 ReactToState();
             }
+        }
+
+        void WriteStartText()
+        {
+            Console.WriteLine("Skriv search for at søge");
+            Console.WriteLine("Skriv quit for at stoppe");
         }
 
         private void ReactToState()
