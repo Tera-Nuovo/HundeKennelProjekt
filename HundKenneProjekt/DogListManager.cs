@@ -43,7 +43,7 @@ namespace HundKenneProjekt
 
         public void SortDogList(SearchSpecifier SS)
         {
-            
+
             //sort dogs
             
             // her ændres kun på rækkefølgen af listen
