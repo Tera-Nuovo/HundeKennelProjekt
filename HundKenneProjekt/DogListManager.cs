@@ -14,14 +14,12 @@ namespace HundKenneProjekt
     {
         public IDogDBManager dbManager;
         public List<AbstractDog> CurentDogList;
-        public bool Ready = false;
 
         public void RequestRemoveSort(SearchSpecifier SS)
         {
             RequestDogsFromDatabase();
             RemoveUnqualifiedDogs(SS);
             SortDogList(SS);
-            Ready = true;
         }
 
         public DogListManager()
