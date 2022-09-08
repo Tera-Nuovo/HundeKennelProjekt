@@ -8,7 +8,7 @@ namespace HundKenneProjekt
         static void Main(string[] args)
         {
             DogDBManager DBman = new DogDBManager();
-            List<Dog> testList = DBman.GetDogsFromDatabase();
+            List<AbstractDog> testList = DBman.GetDogsFromDatabase();
             DogListDisplayer testDisplayer = new DogListDisplayer();
             testDisplayer.DisplayDogList(testList);
 

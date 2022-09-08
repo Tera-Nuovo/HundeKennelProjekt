@@ -13,7 +13,7 @@ namespace HundKenneProjekt
 {
     public class DogDBManager
     {
-        public List<Dog> GetDogsFromDatabase()
+        public List<AbstractDog> GetDogsFromDatabase()
         {
             using (var streamReader = new StreamReader(@"..\..\..\Database\HundeData.csv"))
             {
@@ -23,10 +23,21 @@ namespace HundKenneProjekt
                 };
                 using (var csvReader = new CsvReader(streamReader, csvConfig))
                 {
-                    List<Dog> DogList = csvReader.GetRecords<Dog>().ToList();
-                    return DogList;
+                    List<DBDog> DBDogList = csvReader.GetRecords<DBDog>().ToList();
+                    return ConvertFromDBDogListToAbstractDogList(DBDogList);
                 }
             }
+        }
+
+        private List<AbstractDog> ConvertFromDBDogListToAbstractDogList(List<DBDog> DBDogList)
+        {
+            List<AbstractDog> AbstractDogList = new List<AbstractDog>();
+            foreach(DBDog Dog in DBDogList)
+            {
+                AbstractDogList.Add(Dog);
+            }
+
+            return AbstractDogList;
         }
     }
 }

@@ -10,8 +10,10 @@ using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
 
-public class DBDog
+namespace HundKenneProjekt
 {
+    public class DBDog : AbstractDog
+    {
         [Name("navn")]
         public string Name { get; set; }
         [Name("ID")]
@@ -26,5 +28,6 @@ public class DBDog
         public string backInfo { get; set; }
         [Name("HZ")]
         public string HeartInfo { get; set; }
-	
+
+    }
 }
