@@ -77,7 +77,7 @@ namespace HundKenneProjekt
 
             Console.WriteLine("Specificer om listen skal sortes med højeste værdig øverst eller laveste værdi øverst.");
 
-            if ( == "hf")
+            if ("hf" == "hf")
             {
                 return "hf";
             }
