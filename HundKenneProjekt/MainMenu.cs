@@ -7,7 +7,7 @@ namespace HundKenneProjekt
 {
     public class MainMenu
     {
-        private String state = "start";
+        private string state = "start";
         DogListManager DLMan = new DogListManager();
         DogListDisplayer DLDisplayer = new DogListDisplayer();
 
