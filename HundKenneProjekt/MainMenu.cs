@@ -67,7 +67,7 @@ namespace HundKenneProjekt
 
         void Search()
         {
-            DLMan.RequestRemoveSort(SearchSpecifier.RequestDogList());
+            DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier());
             DLDisplayer.DisplayDogList(DLMan.CurentDogList);
 
         }
