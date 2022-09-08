@@ -21,7 +21,7 @@ namespace HundKenneProjekt
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    Delimiter = "; "
+                    Delimiter = ";"
                 };
                 using (var csvReader = new CsvReader(streamReader, csvConfig))
                 {
