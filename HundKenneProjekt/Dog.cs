@@ -13,7 +13,7 @@ using CsvHelper.Configuration.Attributes;
 
 namespace HundKenneProjekt
 {
-    public class Dog: AbstractDog   
+    public class Dog : AbstractDog   
     {
         public override string Name { get; set; }
         public override string ID { get; set; }

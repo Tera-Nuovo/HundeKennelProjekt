@@ -3,10 +3,10 @@ namespace HundKenneProjekt
 {
     public class SearchSpecifier
     {
-        double Max { get; set; }
-        double Min { get; set; }
-        string Category { get; set; }
-        string Priority { get; set; }
+        public double Max { get; set; }
+        public double Min { get; set; }
+        public string Category { get; set; }
+        public string Priority { get; set; }
 
         static public SearchSpecifier RequestDogList()
         {
