@@ -7,17 +7,20 @@ namespace HundKenneProjekt
 {
     public class MainMenu
     {
-        private string state = "start";
+        private string currentInput = "start";
+
         DogListManager DLMan = new DogListManager();
         DogListDisplayer DLDisplayer = new DogListDisplayer();
 
         public void RunMainMenu()
         {
             WriteStartText();
-            while (state != "quit")
+            currentInput = Console.ReadLine();
+
+            while (currentInput != "quit")
             {
-                SetState(Console.ReadLine());
                 ReactToState();
+                currentInput = Console.ReadLine();
             }
         }
 
@@ -29,35 +32,25 @@ namespace HundKenneProjekt
 
         private void ReactToState()
         {
-            switch (state)
+            int numberInput;
+            if (int.TryParse(currentInput,out numberInput))
             {
-                case "search":
-                    Search();
-                    break;
-                case "quit":
-                    break;
-                default:
-                    WrongInputMessage();
-                    break;
-            }
-
-        }
-
-        private void SetState(string input)
-        {
-            switch (input)
+                DLMan.FindDog(DogSpecifier.GetDogSpecifier(numberInput));
+                DogDisplayer.DisplayDog(DLMan.CurrentDog);
+            } else
             {
-                case "search":
-                    state = "search";
-                    break;
-                case "quit":
-                    state = "quit";
-                    break;
-                default:
-                    state = "wrong input";
-                    break;
+                switch (currentInput)
+                {
+                    case "search":
+                        Search();
+                        break;
+                    case "quit":
+                        break;
+                    default:
+                        WrongInputMessage();
+                        break;
+                }
             }
-
         }
 
         private void WrongInputMessage()
@@ -69,7 +62,7 @@ namespace HundKenneProjekt
         {
             DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier());
             DLDisplayer.DisplayDogList(DLMan.CurentDogList);
-
+            currentInput = "list displayed";
         }
     }
 }

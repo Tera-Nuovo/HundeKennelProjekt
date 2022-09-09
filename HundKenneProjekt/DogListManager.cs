@@ -15,6 +15,7 @@ namespace HundKenneProjekt
     {
         public DogDBManager dbManager;
         public List<AbstractDog> CurentDogList = new List<AbstractDog>();
+        public AbstractDog CurrentDog;
 
         public void RequestRemoveSort(SearchSpecifier SS)
         {
@@ -90,6 +91,12 @@ namespace HundKenneProjekt
         {
             List<AbstractDog> IndexSortedList = dogs.OrderBy(o=>o.HDIndex).Reverse().ToList();
             return IndexSortedList;
+        }
+
+        public void FindDog(int index)
+        {
+            if(index >= 0 && index < CurentDogList.Count)
+            CurrentDog = CurentDogList[index];
         }
     }
 }

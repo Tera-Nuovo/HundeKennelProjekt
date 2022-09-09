@@ -20,6 +20,7 @@ namespace HundKenneProjekt
 			
 			foreach (AbstractDog Dog in DBDogList)
 			{
+                Console.Write((DBDogList.IndexOf(Dog) + 1) + ": ");
                 Console.Write("Navn: " + Dog.Name + " || ");
                 Console.Write("ID: " + Dog.ID + " || ");
                 Console.Write("Køn: " + Dog.Sex + " || ");
@@ -29,8 +30,6 @@ namespace HundKenneProjekt
                 Console.Write("Hjerte Grad: " + Dog.HeartInfo + "\n\n");
 
             }
-
- 
         }
 	}
 }
