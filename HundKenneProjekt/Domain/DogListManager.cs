@@ -15,6 +15,7 @@ namespace HundKenneProjekt
     {
         public DogDBManager dbManager;
         public List<AbstractDog> CurentDogList = new List<AbstractDog>();
+        public AbstractDog CurrentDog;
 
         public void RequestRemoveSort(SearchSpecifier SS)
         {
@@ -45,13 +46,13 @@ namespace HundKenneProjekt
 
         public void SortDogList(SearchSpecifier SS)
         {
-
             //sort dogs
-
+            
             // her ændres kun på rækkefølgen af listen
             if(SS.Priority == "hf")
             {
-                CurentDogList = CurentDogList.OrderByDescending(x => double.Parse(x.HDIndex)).ToList();
+                CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
+              
             }
             else if(SS.Priority == "lf")
             {
@@ -91,6 +92,28 @@ namespace HundKenneProjekt
             List<AbstractDog> IndexSortedList = dogs.OrderBy(o=>o.HDIndex).Reverse().ToList();
             return IndexSortedList;
         }
+
+        public void FindDog(int index)
+        {
+            if(index >= 0 && index < CurentDogList.Count)
+            CurrentDog = CurentDogList[index];
+        }
     }
 }
 
+
+//Func<AbstractDog, double> ConvertToDouble = x =>
+//{
+//    double result;
+
+//    if (double.TryParse(x.HDIndex, out result))
+//    {
+//        return result;
+//    } else
+//    {
+//        return -1;
+//    }
+//};
+
+//CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
+//CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();
