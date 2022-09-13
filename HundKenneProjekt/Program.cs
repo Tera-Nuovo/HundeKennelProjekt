@@ -10,7 +10,6 @@ namespace HundKenneProjekt
             MainMenu mainMenu = new MainMenu();
 
             mainMenu.RunMainMenu();
-            Console.ReadLine();
         }
     }
 }
