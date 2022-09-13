@@ -93,10 +93,15 @@ namespace HundKenneProjekt
             return IndexSortedList;
         }
 
-        public void FindDog(int index)
+        public void FindDog(int IdNumber)
         {
-            if(index >= 0 && index < CurentDogList.Count)
-            CurrentDog = CurentDogList[index];
+            foreach(AbstractDog dog in CurentDogList)
+            {
+                if(dog.HDIndex = IdNumber)
+                {
+                    CurrentDog = dog;
+                }
+            }
         }
     }
 }
