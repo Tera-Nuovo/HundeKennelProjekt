@@ -35,7 +35,7 @@ namespace HundKenneProjekt
             int numberInput;
             if (int.TryParse(currentInput,out numberInput))
             {
-                DLMan.FindDog(DogSpecifier.GetDogSpecifier(numberInput));
+                DLMan.FindDog(currentInput);
                 DogDisplayer.DisplayDog(DLMan.CurrentDog);
             } else
             {

@@ -46,17 +46,33 @@ namespace HundKenneProjekt
 
         public void SortDogList(SearchSpecifier SS)
         {
-            //sort dogs
-            
-            // her ændres kun på rækkefølgen af listen
-            if(SS.Priority == "hf")
+            Func<AbstractDog, double> ConvertToDouble = x =>
             {
-                CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
+                double result;
+
+                if (double.TryParse(x.HDIndex, out result))
+                {
+                    return result;
+                }
+                else
+                {
+                    return -1;
+                }
+            };
+            //sort dogs
+
+            // her ændres kun på rækkefølgen af listen
+            if (SS.Priority == "hf")
+            {
+                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
+                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
               
             }
             else if(SS.Priority == "lf")
             {
-                CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).ToList();
+                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();
+                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).ToList();
+
             }
             //SS.Max det er en int 
             //SS.Min = int
@@ -93,32 +109,32 @@ namespace HundKenneProjekt
             return IndexSortedList;
         }
 
-        public void FindDog(int IdNumber)
+        public void FindDog(string IdNumber)
         {
+            AbstractDog dogToFind = null;
+
             foreach(AbstractDog dog in CurentDogList)
             {
-                if(dog.HDIndex = IdNumber)
+                if(String.Equals(dog.ID, IdNumber))
                 {
-                    CurrentDog = dog;
+                    dogToFind = dog;
                 }
+            }
+
+            if(dogToFind == null)
+            {
+                Console.WriteLine("En hund med dette ID kunne ikke findes.");
+                CurrentDog = null;
+            } else
+            {
+                CurrentDog = dogToFind;
             }
         }
     }
 }
 
 
-//Func<AbstractDog, double> ConvertToDouble = x =>
-//{
-//    double result;
 
-//    if (double.TryParse(x.HDIndex, out result))
-//    {
-//        return result;
-//    } else
-//    {
-//        return -1;
-//    }
-//};
 
 //CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
 //CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();
