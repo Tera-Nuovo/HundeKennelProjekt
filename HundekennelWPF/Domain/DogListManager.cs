@@ -40,40 +40,25 @@ namespace HundKenneProjekt
                 {
                     CurentDogList.Remove(dogs);
                 }
+
+                if (SS.Gender == "G")
+                {
+                    
+                }
+                else if(dogs.Sex != SS.Gender)
+                {
+                    CurentDogList.Remove(dogs);
+                }
             }
             
         }
 
         public void SortDogList(SearchSpecifier SS)
         {
-            Func<AbstractDog, double> ConvertToDouble = x =>
-            {
-                double result;
-
-                if (double.TryParse(x.HDIndex, out result))
-                {
-                    return result;
-                }
-                else
-                {
-                    return -1;
-                }
-            };
             //sort dogs
-
-            // her ændres kun på rækkefølgen af listen
-            if (SS.Priority == "hf")
-            {
-                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
-                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
-              
-            }
-            else if(SS.Priority == "lf")
-            {
-                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();
-                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).ToList();
-
-            }
+            
+            // her ændres kun på rækkefølgen af listen 
+                CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
             //SS.Max det er en int 
             //SS.Min = int
             //SS.Categori = string "hd-index"
@@ -86,7 +71,7 @@ namespace HundKenneProjekt
         }
 
         ///Seach Funktion Via Index
-        public void searchSpecifier(string Max, string Min)
+        public string searchSpecifier(string Max, string Min)
         {
             double.TryParse(Min, out double minIndex);
             double.TryParse(Max, out double MaxIndex);
@@ -96,10 +81,10 @@ namespace HundKenneProjekt
                 double.TryParse(dog.HDIndex, out double DogsIndex);
                 if(DogsIndex >= minIndex && DogsIndex <= MaxIndex)
                 {
-                    Console.WriteLine(dog.Name + "     " + dog.HDIndex);
+                    return (dog.Name + "     " + dog.HDIndex);
                 }
             }
-
+            return "Error";
         }
 
         //Sort Dog and make ready
@@ -109,32 +94,33 @@ namespace HundKenneProjekt
             return IndexSortedList;
         }
 
-        public void FindDog(string IdNumber)
+        public void FindDog(int indexNumber)
         {
-            AbstractDog dogToFind = null;
-
             foreach(AbstractDog dog in CurentDogList)
             {
-                if(String.Equals(dog.ID, IdNumber))
+                double.TryParse(dog.HDIndex, out double dogindexNumber);
+                if(dogindexNumber == indexNumber)
                 {
-                    dogToFind = dog;
+                    CurrentDog = dog;
                 }
-            }
-
-            if(dogToFind == null)
-            {
-                Console.WriteLine("En hund med dette ID kunne ikke findes.");
-                CurrentDog = null;
-            } else
-            {
-                CurrentDog = dogToFind;
             }
         }
     }
 }
 
 
+//Func<AbstractDog, double> ConvertToDouble = x =>
+//{
+//    double result;
 
+//    if (double.TryParse(x.HDIndex, out result))
+//    {
+//        return result;
+//    } else
+//    {
+//        return -1;
+//    }
+//};
 
 //CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
 //CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();

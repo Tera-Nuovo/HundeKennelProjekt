@@ -35,14 +35,14 @@ namespace HundKenneProjekt
             int numberInput;
             if (int.TryParse(currentInput,out numberInput))
             {
-                DLMan.FindDog(currentInput);
+                DLMan.FindDog(DogSpecifier.GetDogSpecifier(numberInput));
                 DogDisplayer.DisplayDog(DLMan.CurrentDog);
             } else
             {
                 switch (currentInput)
                 {
                     case "search":
-                        Search();
+                        //Search();
                         break;
                     case "quit":
                         break;
@@ -58,12 +58,12 @@ namespace HundKenneProjekt
             Console.WriteLine("Inputet kunne ikke læses. Prøv igen.");
         }
 
-        void Search()
+        /*void Search()
         {
             DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier());
             DLDisplayer.DisplayDogList(DLMan.CurentDogList);
             currentInput = "list displayed";
-        }
+        }*/
     }
 }
 

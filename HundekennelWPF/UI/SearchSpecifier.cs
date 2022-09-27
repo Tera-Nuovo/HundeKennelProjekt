@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
-
+using System.Collections.Specialized;
+using System.Security.Cryptography;
 
 namespace HundKenneProjekt
 {
@@ -11,51 +11,43 @@ namespace HundKenneProjekt
         public double Min { get; set; }
         public string Category { get; set; }
         public string Priority { get; set; }
+        public string Gender { get; set; }
 
-        static public SearchSpecifier GetSearchSpecifier()
+        static public SearchSpecifier GetSearchSpecifier(string hdMax, string hdMin,string gender)
         {
             SearchSpecifier SS = new SearchSpecifier();
-            SS.GetMax();
-            SS.GetMin();
-            SS.GetCategori();
-            SS.GetPriority();
+            SS.GetMax(hdMax);
+            SS.GetMin(hdMin);
+            SS.GetGender(gender);
+            //SS.GetCategori();
+            //SS.GetPriority();
 
             return SS;
         }
 
-        private void GetMax()
-        {
-            string input;
-            double max;
-            Console.WriteLine("Specificer max værdi");
-            input = Console.ReadLine();
-
-            while (!double.TryParse(input, out max))
-            {
-                Console.WriteLine("Kunne ikke læses. Prøv igen.");
-                Console.WriteLine("Specificer max værdi");
-                input = Console.ReadLine();
-            }
-
-            this.Max = max;
+        private void GetGender(string gender)
+        {;
+            this.Gender = gender[0].ToString();
         }
 
-        private void GetMin()
+        private void GetMax(string hdMax)
         {
-            string input;
-            double min;
-
-            Console.WriteLine("Specificer minimum værdi");
-            input = Console.ReadLine();
-
-            while (!double.TryParse(input, out min))
+            //double.TryParse(hdMax, out double max);
+            if(double.TryParse(hdMax, out double max))
             {
-                Console.WriteLine("Kunne ikke læses. Prøv igen.");
-                Console.WriteLine("Specificer minimum værdi");
-                input = Console.ReadLine();
+                 this.Max = max;
             }
 
-            this.Min = min;
+            
+        }
+
+        private void GetMin(string hdMin)
+        {
+            //double.TryParse(hdMax, out double max);
+            if (double.TryParse(hdMin, out double min))
+            {
+                this.Min = min;
+            }
         }
 
         private void GetPriority()
