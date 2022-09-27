@@ -72,7 +72,15 @@ namespace HundKenneProjekt
             //sort dogs
 
             // her ændres kun på rækkefølgen af listen
+            if(SS.Priority == "hf" || SS.Priority == "Sorting priority")
+            {
                 CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
+            }   
+            else if(SS.Priority == "lf")
+            {
+                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();
+            }
+
             //SS.Max det er en int 
             //SS.Min = int
             //SS.Categori = string "hd-index"

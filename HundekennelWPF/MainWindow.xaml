@@ -15,9 +15,9 @@
         <TextBox x:Name="HD_IndexInputMax" HorizontalAlignment="Left" Margin="156,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
 
 
-            <Label Content="HD-Index Max" HorizontalAlignment="Left" Margin="156,118,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
+        <Label Content="HD-Index Max" HorizontalAlignment="Left" Margin="156,118,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
         <Label Content="Dogs Data" HorizontalAlignment="Left" Margin="1146,36,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
-        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="403,436,0,0" VerticalAlignment="Top" Height="46" Width="134" FontSize="24" Click="SearchButton_Click"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="396,536,0,0" VerticalAlignment="Top" Height="46" Width="134" FontSize="24" Click="SearchButton_Click"/>
         <TextBox x:Name="HD_IndexInputMin" HorizontalAlignment="Left" Margin="520,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
         <Label Content="HD-Index Min" HorizontalAlignment="Left" Margin="520,118,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
         <Label Content="Dog Gender Male(H), Female(T)" HorizontalAlignment="Left" Margin="161,324,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
@@ -25,6 +25,11 @@
             <ComboBoxItem IsSelected="True">Gender</ComboBoxItem>
             <ComboBoxItem>H</ComboBoxItem>
             <ComboBoxItem>T</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Dogsorting_priority" HorizontalAlignment="Left" Margin="605,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
+            <ComboBoxItem IsSelected="True" Content="Sorting priority"/>
+            <ComboBoxItem Content="hf"/>
+            <ComboBoxItem Content="lf"/>
         </ComboBox>
     </Grid>
 </Window>

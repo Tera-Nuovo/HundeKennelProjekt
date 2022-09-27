@@ -37,7 +37,7 @@ namespace HundekennelWPF
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier(HD_IndexInputMax.Text,HD_IndexInputMin.Text,DogGender.Text));
+            DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier(HD_IndexInputMax.Text,HD_IndexInputMin.Text,DogGender.Text, Dogsorting_priority.Text));
 
             DogsDisplay.ItemsSource = DLMan.CurentDogList;
         }

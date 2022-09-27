@@ -13,14 +13,14 @@ namespace HundKenneProjekt
         public string Priority { get; set; }
         public string Gender { get; set; }
 
-        static public SearchSpecifier GetSearchSpecifier(string hdMax, string hdMin,string gender)
+        static public SearchSpecifier GetSearchSpecifier(string hdMax, string hdMin,string gender, string priority)
         {
             SearchSpecifier SS = new SearchSpecifier();
             SS.GetMax(hdMax);
             SS.GetMin(hdMin);
             SS.GetGender(gender);
             //SS.GetCategori();
-            //SS.GetPriority();
+            SS.GetPriority(priority);
 
             return SS;
         }
@@ -50,27 +50,10 @@ namespace HundKenneProjekt
             }
         }
 
-        private void GetPriority()
+        private void GetPriority(string priority)
         {
    
-            string input;
-
-            Console.WriteLine("Specificer prioritet:");
-            Console.WriteLine("Højeste værdi først =\"hf\"");
-            Console.WriteLine("Laveste værdi først =\"lf\"");
-            
-            input = Console.ReadLine();
-
-            while (input != "hf" && input != "lf")
-            {
-                Console.WriteLine("Kunne ikke læses. Prøv igen.");
-                Console.WriteLine("Specificer prioritet:");
-                Console.WriteLine("Højeste værdi først =\"hf\"");
-                Console.WriteLine("Laveste værdi først =\"lf\"");
-                input = Console.ReadLine();
-            }
-
-            this.Priority = input;
+            this.Priority = priority;
         }
 
         private void GetCategori()
