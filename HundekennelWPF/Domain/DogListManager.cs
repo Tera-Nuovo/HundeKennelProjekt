@@ -73,7 +73,6 @@ namespace HundKenneProjekt
 
             // her ændres kun på rækkefølgen af listen
                 CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
-                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
             //SS.Max det er en int 
             //SS.Min = int
             //SS.Categori = string "hd-index"
