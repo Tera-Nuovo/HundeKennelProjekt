@@ -28,6 +28,11 @@ namespace HundKenneProjekt
         public override string BackInfo { get; set; }
         [Name("HZ")]
         public override string HeartInfo { get; set; }
-        
+        [Name("far")]
+        public override string DadStambog { get; set; }
+        [Name("mor")]
+        public override string MomStambog { get; set; }
+        [Name("Stambog")]
+        public override string Stambog { get; set; }
     }
 }

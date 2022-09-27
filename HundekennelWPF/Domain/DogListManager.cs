@@ -30,6 +30,8 @@ namespace HundKenneProjekt
             this.dbManager = new DogDBManager();
         }
 
+        public AbstractDog SelectedDog { get; set; }
+
         void RemoveUnqualifiedDogs(SearchSpecifier SS)
         {
             // her fjerne vi kun hund der ikke lever op til kriterierne.

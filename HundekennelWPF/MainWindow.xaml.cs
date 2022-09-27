@@ -1,4 +1,5 @@
-﻿using HundKenneProjekt;
+﻿using HundekennelProjekt;
+using HundKenneProjekt;
 using System;
 using System.Collections.Generic;
 using System.DirectoryServices.ActiveDirectory;
@@ -24,10 +25,14 @@ namespace HundekennelWPF
     {
         DogListManager DLMan = new DogListManager();
         DogListDisplayer DLDisplayer = new DogListDisplayer();
+        DogProfileDisplayer ShowWindow = new DogProfileDisplayer();
+
+
 
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = DLMan;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

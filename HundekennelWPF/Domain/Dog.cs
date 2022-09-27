@@ -22,5 +22,8 @@ namespace HundKenneProjekt
         public override string HDIndex { get; set; }
         public override string BackInfo { get; set; }
         public override string HeartInfo { get; set; }
+        public override string DadStambog { get; set; }
+        public override string MomStambog { get; set; }
+        public override string Stambog { get; set; }
     }
 }

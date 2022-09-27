@@ -1,0 +1,30 @@
+﻿<Window x:Class="HundekennelProjekt.DogProfileDisplayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HundekennelProjekt"
+        mc:Ignorable="d"
+        Title="DogProfileDisplayer" Height="450" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="SelectedDogsName" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Name}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="SelectedDogsSex" HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="Name:"/><LineBreak/><Run Language="da-dk"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="Sex"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="HD-Index"/><Run Language="da-dk" Text=":"/><LineBreak/><Run Language="da-dk"/></TextBlock>
+        <TextBlock x:Name="SelectedDogsHDIndex" HorizontalAlignment="Left" Margin="10,181,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="HD:"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="SelectedDogsHDGrade" HorizontalAlignment="Left" Margin="10,234,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="AD"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="SelectedDogsAdGrade" HorizontalAlignment="Left" Margin="10,283,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="HZ"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="SelectedDogsHzGrade" HorizontalAlignment="Left" Margin="10,336,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="ID"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="SelectedDogsID" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="SelectedDogsID1" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
