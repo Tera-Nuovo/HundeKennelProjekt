@@ -18,16 +18,17 @@
         <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="396,536,0,0" VerticalAlignment="Top" Height="46" Width="134" FontSize="24" Click="SearchButton_Click"/>
         <TextBox x:Name="HD_IndexInputMin" HorizontalAlignment="Left" Margin="520,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
         <Label Content="HD-Index Min" HorizontalAlignment="Left" Margin="520,118,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
-        <Label Content="Dog Gender Male(H), Female(T)" HorizontalAlignment="Left" Margin="161,324,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
-        <ComboBox x:Name="DogGender" HorizontalAlignment="Left" Margin="161,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
+        <Label Content="Dog Gender Male(H), Female(T)" HorizontalAlignment="Left" Margin="58,319,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
+        <ComboBox x:Name="DogGender" HorizontalAlignment="Left" Margin="113,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
             <ComboBoxItem IsSelected="True">Gender</ComboBoxItem>
             <ComboBoxItem>H</ComboBoxItem>
             <ComboBoxItem>T</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="Dogsorting_priority" HorizontalAlignment="Left" Margin="605,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
+        <ComboBox x:Name="Dogsorting_priority" HorizontalAlignment="Left" Margin="642,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
             <ComboBoxItem IsSelected="True" Content="Sorting priority"/>
             <ComboBoxItem Content="hf"/>
             <ComboBoxItem Content="lf"/>
         </ComboBox>
+        <Label Content="Sorting Priority(Highest first/ Lowerst First)" HorizontalAlignment="Left" Margin="520,319,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
     </Grid>
 </Window>
