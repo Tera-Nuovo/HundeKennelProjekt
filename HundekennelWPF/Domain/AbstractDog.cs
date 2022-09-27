@@ -14,7 +14,7 @@ namespace HundKenneProjekt
 
         public override string ToString()
         {
-            return ID + Name + Sex + Hips + HDIndex + BackInfo + HeartInfo;
+            return "ID: " + ID + " || " + "Navn: " + Name + " || " + "Køn: " + Sex + " || " + "HD: " + Hips + " || " +"\n" + "HD Index: " + HDIndex + " ||  " + "Ryg Grad: " + BackInfo + " | | " + "Hjerte Grad: " + HeartInfo + "\n";
         }
     }
 }
