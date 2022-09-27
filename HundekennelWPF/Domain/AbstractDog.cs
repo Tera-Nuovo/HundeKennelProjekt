@@ -11,6 +11,11 @@ namespace HundKenneProjekt
         public abstract string HDIndex { get; set; }
         public abstract string BackInfo { get; set; }
         public abstract string HeartInfo { get; set; }
+
+        public override string ToString()
+        {
+            return ID + Name + Sex + Hips + HDIndex + BackInfo + HeartInfo;
+        }
     }
 }
 

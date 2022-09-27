@@ -9,7 +9,7 @@
         ">
     <Grid Margin="0,0,0,-6">
         <ScrollViewer Margin="1146,95,55,94">
-            <TextBlock x:Name="DogsDisplay" Margin="0,0,0,0" TextWrapping="Wrap" Width="709" FontSize="24"/>
+            <ListBox  ItemsSource="{Binding DLMan.CurentDogList}" x:Name="DogsDisplay" Margin="0,0,0,0" Width="709" FontSize="24"/>
         </ScrollViewer>
         <Rectangle HorizontalAlignment="Left" Margin="1146,94,0,94" Stroke="Black" Width="719"/>
         <TextBox x:Name="HD_IndexInputMax" HorizontalAlignment="Left" Margin="156,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
