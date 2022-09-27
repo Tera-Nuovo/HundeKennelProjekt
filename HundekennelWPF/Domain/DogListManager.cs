@@ -8,6 +8,7 @@ using CsvHelper;
 using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
+using System;
 
 namespace HundKenneProjekt
 {
@@ -55,10 +56,34 @@ namespace HundKenneProjekt
 
         public void SortDogList(SearchSpecifier SS)
         {
+            Func<AbstractDog, double> ConvertToDouble = x =>
+            {
+                double result;
+
+                if (double.TryParse(x.HDIndex, out result))
+                {
+                    return result;
+                }
+                else
+                {
+                    return -1;
+                }
+            };
             //sort dogs
-            
-            // her ændres kun på rækkefølgen af listen 
-                CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
+
+            // her ændres kun på rækkefølgen af listen
+            if (SS.Priority == "hf")
+            {
+                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).Reverse().ToList();
+                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).Reverse().ToList();
+
+            }
+            else if (SS.Priority == "lf")
+            {
+                CurentDogList = CurentDogList.OrderBy(ConvertToDouble).ToList();
+                //CurentDogList = CurentDogList.OrderBy(x => x.HDIndex).ToList();
+
+            }
             //SS.Max det er en int 
             //SS.Min = int
             //SS.Categori = string "hd-index"
