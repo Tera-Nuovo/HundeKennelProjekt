@@ -26,10 +26,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="ID"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
         <TextBlock x:Name="SelectedDogsID1" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="169"/>
         <Button x:Name="ShowParents" Content="Show Parents" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click" Height="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="224,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="Children"/><LineBreak/><Run Language="da-dk"/></TextBlock>
-        <TextBlock x:Name="Children" HorizontalAlignment="Left" Margin="224,38,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="224"/>
+        <TextBlock HorizontalAlignment="Left" Margin="138,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="da-dk" Text="Children"/><LineBreak/><Run Language="da-dk"/></TextBlock>
+        <TextBlock x:Name="Children" HorizontalAlignment="Left" Margin="138,266,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="352" Height="158"/>
         <TextBlock x:Name="SelectedDogStambog" HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" IsEnabled="False"><Run Language="da-dk" Text="TextBlock"/><LineBreak/><Run Language="da-dk"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73"><Run Text="Stambog:"/><LineBreak/><Run/></TextBlock>
-        <Image x:Name="DogPicture" HorizontalAlignment="Left" Height="247" Margin="224,115,0,0" VerticalAlignment="Top" Width="247"/>
+        <Image x:Name="DogPicture" HorizontalAlignment="Left" Height="200" Margin="179,14,0,0" VerticalAlignment="Top" Width="281"/>
     </Grid>
 </Window>
