@@ -1,0 +1,91 @@
+﻿<Window x:Class="HundekennelWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HundekennelWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1440
+        ">
+	<!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <ListBox  ItemsSource="{Binding DLMan.CurentDogList}" x:Name="DogsDisplay" FontSize="24" MinWidth="10" MinHeight="10" VerticalContentAlignment="Top" MaxHeight="500" BorderThickness="1,1,1,1" BorderBrush="Black" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="6" Grid.RowSpan="7"/>
+
+
+        <Label Content="Hunde Kennel Program" FontSize="36" FontWeight="Bold" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="1"/>
+
+        <Button x:Name="SearchButton" Content="Search" FontSize="24" Click="SearchButton_Click" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Padding="0,0,0,0" Margin="0,35,0,0"/>
+
+        <Label Content="HD-Index Max" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="0,0,200,0"/>
+        <Label Content="HD-Index Min" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" HorizontalAlignment="Left" Height="42" Margin="286,0,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dogs Data" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="1" Grid.RowSpan="1" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Width="128" Height="42" VerticalAlignment="Top"/>
+        <Label Content="Dog Gender Male(H), Female(T)" Grid.Row="5" Grid.Column="1" Grid.RowSpan="1" Margin="0,50,0,12"/>
+        <Label Content="Sorting Priority(Highest first/ Lowest First)" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Margin="0,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="HD_IndexInputMax" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" Text="" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="3" Margin="0,0,166,70" MaxWidth="200" MaxHeight="25"/>
+        <TextBox x:Name="HD_IndexInputMin" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" Text="" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="286,0,111,70" MaxWidth="200" MaxHeight="25"/>
+        <ComboBox x:Name="DogGender"  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" MaxDropDownHeight="180" MinWidth="25" MinHeight="25" MaxWidth="200" MaxHeight="25" Margin="0,0,200,85" Background="Black">
+            <ComboBoxItem IsSelected="True">Gender</ComboBoxItem>
+            <ComboBoxItem>H</ComboBoxItem>
+            <ComboBoxItem>T</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Dogsorting_priority" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="1" MaxDropDownHeight="180" MinWidth="25" MinHeight="25" MaxWidth="200" MaxHeight="25">
+            <ComboBoxItem IsSelected="True" Content="Sorting priority"/>
+            <ComboBoxItem Content="hf"/>
+            <ComboBoxItem Content="lf"/>
+        </ComboBox> -->
+
+
+
+
+
+		<ScrollViewer Margin="1146,95,55,94">
+            <ListBox  ItemsSource="{Binding DLMan.CurentDogList}" x:Name="DogsDisplay" Margin="0,0,0,0" Width="709" FontSize="24"/>
+        </ScrollViewer>
+        <Rectangle HorizontalAlignment="Left" Margin="1146,94,0,0" Stroke="Black" Width="719" Height="882" VerticalAlignment="Top"/>
+        <TextBox x:Name="HD_IndexInputMax" TextWrapping="Wrap" FontSize="24" TextChanged="TextBox_TextChanged" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="4" Margin="37,0,0,960" Grid.RowSpan="3"/>
+        <Label Content="HD-Index Max" HorizontalAlignment="Left" Margin="156,118,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
+        <Label Content="Dogs Data" HorizontalAlignment="Left" Margin="1146,36,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="SearchButton" Content="Search" FontSize="24" Click="SearchButton_Click" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="HD_IndexInputMin" HorizontalAlignment="Left" Margin="520,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
+        <Label Content="HD-Index Min" HorizontalAlignment="Left" Margin="520,118,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
+        <Label Content="Dog Gender Male(H), Female(T)" HorizontalAlignment="Left" Margin="58,319,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
+        <ComboBox x:Name="DogGender" HorizontalAlignment="Left" Margin="113,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
+            <ComboBoxItem IsSelected="True">Gender</ComboBoxItem>
+            <ComboBoxItem>H</ComboBoxItem>
+            <ComboBoxItem>T</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Dogsorting_priority" HorizontalAlignment="Left" Margin="642,375,0,0" VerticalAlignment="Top" Width="260" Height="39" FontSize="24">
+            <ComboBoxItem IsSelected="True" Content="Sorting priority"/>
+            <ComboBoxItem Content="hf"/>
+            <ComboBoxItem Content="lf"/>
+        </ComboBox>
+        <Label Content="Sorting Priority(Highest first/ Lowerst First)" HorizontalAlignment="Left" Margin="520,319,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
+    
+</Window>
