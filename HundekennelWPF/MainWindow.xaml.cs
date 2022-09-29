@@ -46,7 +46,8 @@ namespace HundekennelWPF
 
             DogsDisplay.ItemsSource = DLMan.CurentDogList;
 
-            
+            SelectedDogsMom.Text = "";
+            SelectedDogsDad.Text = "";
         }
 
         private void Gender_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,7 +57,12 @@ namespace HundekennelWPF
 
         private void ShowMom_Click(object sender, RoutedEventArgs e)
         {
-            SelectedDogsMom.Text = DLMan.SelectedDog.Mom().ToString();
+            if(DLMan.SelectedDog != null)
+            {
+                SelectedDogsMom.Text = DLMan.SelectedDog.Mom().ToString();
+                SelectedDogsDad.Text = DLMan.SelectedDog.Dad().ToString();
+            }
+            
         }
     }
 }
