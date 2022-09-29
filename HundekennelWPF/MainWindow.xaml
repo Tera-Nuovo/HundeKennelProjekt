@@ -15,8 +15,8 @@
             <Rectangle HorizontalAlignment="Left" Margin="68,536,0,0" Stroke="Black" Width="719" Height="343" VerticalAlignment="Top"/>
             <TextBox x:Name="HD_IndexInputMax" HorizontalAlignment="Left" Margin="119,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
             <Label Content="HD-Index Max" HorizontalAlignment="Left" Margin="119,124,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
-            <Label Content="Dogs Data" HorizontalAlignment="Left" Margin="68,392,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
-            <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="383,375,0,0" VerticalAlignment="Top" Height="46" Width="134" FontSize="24" Click="SearchButton_Click"/>
+            <Label Content="Dogs Data" HorizontalAlignment="Left" Margin="68,459,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+            <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="383,398,0,0" VerticalAlignment="Top" Height="46" Width="134" FontSize="24" Click="SearchButton_Click"/>
             <TextBox x:Name="HD_IndexInputMin" HorizontalAlignment="Left" Margin="483,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="39" FontSize="24" TextChanged="TextBox_TextChanged"/>
             <Label Content="HD-Index Min" HorizontalAlignment="Left" Margin="483,124,0,0" VerticalAlignment="Top" FontSize="24" Height="37" FontWeight="Bold"/>
             <Label Content="Dog Gender Male(H), Female(T)" Margin="21,251,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold" HorizontalAlignment="Left" Width="369"/>
@@ -30,7 +30,7 @@
                 <ComboBoxItem Content="hf"/>
                 <ComboBoxItem Content="lf"/>
             </ComboBox>
-            <Label Content="Sorting Priority(Highest first/ Lowerst First)" HorizontalAlignment="Left" Margin="483,337,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
+            <Label Content="Sorting Priority(Highest first/ Lowerst First)" HorizontalAlignment="Left" Margin="483,254,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
             <TextBlock x:Name="SelectedDogsName" HorizontalAlignment="Left" Margin="1105,191,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Name}" VerticalAlignment="Top" Height="40" Width="646" FontSize="30" FontWeight="Bold"/>
             <TextBlock x:Name="SelectedDogsSex" HorizontalAlignment="Left" Margin="1105,299,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Sex}" VerticalAlignment="Top" Height="37" Width="114" FontSize="30" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" Margin="1105,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="114" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Name:"/><LineBreak/><Run Language="da-dk"/></TextBlock>
