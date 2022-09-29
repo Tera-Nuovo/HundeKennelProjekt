@@ -16,7 +16,7 @@ namespace HundKenneProjekt
         public abstract string MomStambog { get; set; }
         public abstract string Stambog { get; set; }
 
-        /*public AbstractDog Dad()
+        public AbstractDog Dad()
         {
             foreach(AbstractDog dog in dogDBman.GetDogsFromDatabase())
             {
@@ -38,7 +38,7 @@ namespace HundKenneProjekt
                 }
             }
             return null;
-        }*/
+        }
 
         public override string ToString()
         {

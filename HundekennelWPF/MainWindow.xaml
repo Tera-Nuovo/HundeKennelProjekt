@@ -47,5 +47,6 @@
         <TextBlock x:Name="SelectedDogsID1" HorizontalAlignment="Left" Margin="1105,83,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.ID}" VerticalAlignment="Top" Height="36" Width="114" FontSize="30" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="1105,866,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="82" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Mom"/><LineBreak/><Run Language="da-dk"/><LineBreak/><Run/></TextBlock>
         <TextBlock x:Name="SelectedDogsMom" HorizontalAlignment="Left" Margin="1105,913,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Mom}" VerticalAlignment="Top" Height="67" Width="354" FontSize="30" FontWeight="Bold"/>
+        <Button x:Name="ShowMom" Content="Show Parents" HorizontalAlignment="Left" Margin="383,946,0,0" VerticalAlignment="Top" Height="68" Width="134" FontSize="24" Click="ShowMom_Click"/>
     </Grid>
 </Window>

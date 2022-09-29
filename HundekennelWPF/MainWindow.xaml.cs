@@ -45,11 +45,18 @@ namespace HundekennelWPF
             DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier(HD_IndexInputMax.Text,HD_IndexInputMin.Text,DogGender.Text, Dogsorting_priority.Text));
 
             DogsDisplay.ItemsSource = DLMan.CurentDogList;
+
+            
         }
 
         private void Gender_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void ShowMom_Click(object sender, RoutedEventArgs e)
+        {
+            SelectedDogsMom.Text = DLMan.SelectedDog.Mom().ToString();
         }
     }
 }
