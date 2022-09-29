@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080
         " Width="1956">
-    <Grid Margin="0,0,10,-6">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid Margin="0,0,10,-6">
         <ScrollViewer Margin="68,537,0,0" HorizontalAlignment="Left" Width="719" Height="342" VerticalAlignment="Top">
             <ListBox  ItemsSource="{Binding DLMan.CurentDogList}" SelectedItem="{Binding SelectedDog}" x:Name="DogsDisplay" Margin="0,0,0,0" Width="709" FontSize="24"/>
         </ScrollViewer>
@@ -50,4 +52,5 @@
         <TextBlock HorizontalAlignment="Left" Margin="1547,866,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="82" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Dad"/><LineBreak/><Run Language="da-dk"/></TextBlock>
         <TextBlock x:Name="SelectedDogsDad" HorizontalAlignment="Left" Margin="1547,913,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Mom.ToString}" VerticalAlignment="Top" Height="147" Width="354" FontSize="20" FontWeight="Bold"/>
     </Grid>
+    </ScrollViewer>
 </Window>
