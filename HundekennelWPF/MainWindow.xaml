@@ -51,6 +51,18 @@
         <Button x:Name="ShowMom" Content="Show Parents" HorizontalAlignment="Left" Margin="383,946,0,0" VerticalAlignment="Top" Height="68" Width="134" FontSize="24" Click="ShowMom_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="1547,866,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="82" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Dad"/><LineBreak/><Run Language="da-dk"/></TextBlock>
         <TextBlock x:Name="SelectedDogsDad" HorizontalAlignment="Left" Margin="1547,913,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Mom.ToString}" VerticalAlignment="Top" Height="147" Width="354" FontSize="20" FontWeight="Bold"/>
-    </Grid>
+        <Label Content="HUNDE KENNEL PROGRAM" ClipToBounds="True" FontFamily="Tele-Marines" FontSize="36" FontStyle="Italic" FontWeight="Normal" Margin="0,0,1221,1050">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB317FF"/>
+                        <GradientStop Color="DarkOrange" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+
+        </Grid>
     </ScrollViewer>
 </Window>
