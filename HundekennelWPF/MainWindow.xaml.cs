@@ -26,7 +26,7 @@ namespace HundekennelWPF
         DogListManager DLMan = new DogListManager();
         DogListDisplayer DLDisplayer = new DogListDisplayer();
         DogProfileDisplayer ShowWindow = new DogProfileDisplayer();
-
+        DogDBManager DBManager = new DogDBManager();
 
 
         public MainWindow()
