@@ -30,7 +30,7 @@
                 <ComboBoxItem Content="hf"/>
                 <ComboBoxItem Content="lf"/>
             </ComboBox>
-            <Label Content="Sorting Priority(Highest first/ Lowerst First)" HorizontalAlignment="Left" Margin="483,249,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
+            <Label Content="Sorting Priority(Highest first/ Lowerst First)" HorizontalAlignment="Left" Margin="483,337,0,0" VerticalAlignment="Top" FontSize="24" Height="41" FontWeight="Bold"/>
             <TextBlock x:Name="SelectedDogsName" HorizontalAlignment="Left" Margin="1105,191,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Name}" VerticalAlignment="Top" Height="40" Width="646" FontSize="30" FontWeight="Bold"/>
             <TextBlock x:Name="SelectedDogsSex" HorizontalAlignment="Left" Margin="1105,299,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Sex}" VerticalAlignment="Top" Height="37" Width="114" FontSize="30" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" Margin="1105,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="114" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Name:"/><LineBreak/><Run Language="da-dk"/></TextBlock>
@@ -45,7 +45,11 @@
             <TextBlock x:Name="SelectedDogsHzGrade" HorizontalAlignment="Left" Margin="1105,774,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.HeartInfo}" VerticalAlignment="Top" Height="38" Width="114" FontSize="30" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" Margin="1105,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="57" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="ID"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
             <TextBlock x:Name="SelectedDogsID1" HorizontalAlignment="Left" Margin="1105,83,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.ID}" VerticalAlignment="Top" Height="36" Width="114" FontSize="30" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1105,866,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="82" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Mom"/><LineBreak/><Run Language="da-dk"/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="SelectedDogsMom" HorizontalAlignment="Left" Margin="1105,913,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Mom}" VerticalAlignment="Top" Height="147" Width="354" FontSize="20" FontWeight="Bold"/>
             <Button x:Name="ShowMom" Content="Show Parents" HorizontalAlignment="Left" Margin="383,946,0,0" VerticalAlignment="Top" Height="68" Width="134" FontSize="24" Click="ShowMom_Click"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1547,866,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="82" FontSize="30" FontWeight="Bold"><Run Language="da-dk" Text="Dad"/><LineBreak/><Run Language="da-dk"/></TextBlock>
+            <TextBlock x:Name="SelectedDogsDad" HorizontalAlignment="Left" Margin="1547,913,0,0" TextWrapping="Wrap" Text="{Binding SelectedDog.Mom.ToString}" VerticalAlignment="Top" Height="147" Width="354" FontSize="20" FontWeight="Bold"/>
         </Grid>
     </ScrollViewer>
 </Window>
