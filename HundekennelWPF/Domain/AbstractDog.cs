@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Controls;
+using System.Drawing;
 
 namespace HundKenneProjekt
 {
@@ -16,6 +18,30 @@ namespace HundKenneProjekt
         public abstract string MomStambog { get; set; }
         public abstract string Stambog { get; set; }
 
+        
+
+
+        public string DogPicturePath()
+        {
+            return @"../../../Database/Pictures/" + ID + ".png";
+        }
+
+        public string Children()
+        {
+            string output = "";
+            foreach (AbstractDog dog in dogDBman.GetDogsFromDatabase())
+            {
+                if (dog.DadStambog == this.Stambog)
+                {
+                    output = output + dog.Stambog + ", ";
+                }
+                else if (dog.MomStambog == this.Stambog)
+                {
+                    output = output + dog.Stambog + ", ";
+                }
+            }
+            return output;
+        }
         public AbstractDog Dad()
         {
             foreach(AbstractDog dog in dogDBman.GetDogsFromDatabase())

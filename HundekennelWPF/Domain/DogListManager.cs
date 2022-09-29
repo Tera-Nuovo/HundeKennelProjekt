@@ -11,6 +11,11 @@ using CsvHelper.Configuration.Attributes;
 using System;
 using HundekennelProjekt;
 using System.DirectoryServices.ActiveDirectory;
+using System.Windows.Controls;
+using System.Drawing;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HundKenneProjekt
 {
@@ -73,6 +78,9 @@ namespace HundKenneProjekt
                 DPD.SelectedDogsHzGrade.Text = dog.HeartInfo;
                 DPD.SelectedDogsID1.Text = dog.ID;
                 DPD.SelectedDogsSex.Text = dog.Sex;
+                DPD.Children.Text = dog.Children();
+                DPD.SelectedDogStambog.Text = dog.Stambog;
+                DPD.DogPicture.Source = new BitmapImage(new Uri(dog.DogPicturePath(), UriKind.Relative));
             }
             
         }

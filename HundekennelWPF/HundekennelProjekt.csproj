@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Database\Pictures\5743.png" />
     <None Remove="Fire-flames-hand-drawn-on-transparent-background-PNG.png" />
     <None Remove="fire-transparent-flames-images-0.png" />
   </ItemGroup>
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Database\Pictures\5743.png" />
     <Resource Include="Fire-flames-hand-drawn-on-transparent-background-PNG.png" />
     <Resource Include="fire-transparent-flames-images-0.png" />
   </ItemGroup>
