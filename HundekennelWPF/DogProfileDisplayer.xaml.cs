@@ -23,10 +23,35 @@ namespace HundekennelProjekt
     public partial class DogProfileDisplayer : Window
     {
         DogListManager DLMan = new DogListManager();
+        DogDBManager DogDB = new DogDBManager();
+        AbstractDog selectedDog()
+        {
+            foreach (AbstractDog dog in DogDB.GetDogsFromDatabase())
+            {
+                if (SelectedDogsID1.Text == dog.ID)
+                {
+                    return dog;
+                }
+            }
+            return null;
+        }
 
         public DogProfileDisplayer()
         {
             InitializeComponent();
+            DataContext = DLMan;
+            this.ResizeMode = ResizeMode.NoResize;
+
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(selectedDog != null)
+            {
+                DLMan.DogprofileDisplayer(selectedDog().Dad());
+                DLMan.DogprofileDisplayer(selectedDog().Mom()); 
+            }
+            
         }
     }
 }

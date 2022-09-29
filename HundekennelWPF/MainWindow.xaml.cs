@@ -33,6 +33,7 @@ namespace HundekennelWPF
         {
             InitializeComponent();
             DataContext = DLMan;
+            this.ResizeMode = ResizeMode.NoResize;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -45,9 +46,6 @@ namespace HundekennelWPF
             DLMan.RequestRemoveSort(SearchSpecifier.GetSearchSpecifier(HD_IndexInputMax.Text,HD_IndexInputMin.Text,DogGender.Text, Dogsorting_priority.Text));
 
             DogsDisplay.ItemsSource = DLMan.CurentDogList;
-
-            SelectedDogsMom.Text = "";
-            SelectedDogsDad.Text = "";
         }
 
         private void Gender_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -59,8 +57,8 @@ namespace HundekennelWPF
         {
             if(DLMan.SelectedDog != null)
             {
-                SelectedDogsMom.Text = DLMan.SelectedDog.Mom().ToString();
-                SelectedDogsDad.Text = DLMan.SelectedDog.Dad().ToString();
+                //Show in other window
+                DLMan.DogprofileDisplayer(DLMan.SelectedDog);
             }
             
         }

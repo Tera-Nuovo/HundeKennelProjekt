@@ -9,6 +9,8 @@ using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
 using System;
+using HundekennelProjekt;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace HundKenneProjekt
 {
@@ -17,6 +19,7 @@ namespace HundKenneProjekt
         public DogDBManager dbManager;
         public List<AbstractDog> CurentDogList = new List<AbstractDog>();
         public AbstractDog CurrentDog;
+        public DogProfileDisplayer DPD;
 
         public void RequestRemoveSort(SearchSpecifier SS)
         {
@@ -52,6 +55,24 @@ namespace HundKenneProjekt
                 {
                     CurentDogList.Remove(dogs);
                 }
+            }
+            
+        }
+
+        public void DogprofileDisplayer(AbstractDog dog)
+        {
+            if(dog != null)
+            {
+                DPD = new DogProfileDisplayer();
+                DPD.Show();
+
+                DPD.SelectedDogsName.Text = dog.Name;
+                DPD.SelectedDogsAdGrade.Text = dog.BackInfo;
+                DPD.SelectedDogsHDGrade.Text = dog.Hips;
+                DPD.SelectedDogsHDIndex.Text = dog.HDIndex;
+                DPD.SelectedDogsHzGrade.Text = dog.HeartInfo;
+                DPD.SelectedDogsID1.Text = dog.ID;
+                DPD.SelectedDogsSex.Text = dog.Sex;
             }
             
         }
