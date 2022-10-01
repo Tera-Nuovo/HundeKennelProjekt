@@ -64,6 +64,7 @@ namespace HundKenneProjekt
             
         }
 
+        //Creates new window of dog
         public void DogprofileDisplayer(AbstractDog dog)
         {
             if(dog != null)
