@@ -82,6 +82,7 @@ namespace HundKenneProjekt
                 DPD.Children.Text = dog.Children();
                 DPD.SelectedDogStambog.Text = dog.Stambog;
                 DPD.DogPicture.Source = new BitmapImage(new Uri(dog.DogPicturePath(), UriKind.Relative));
+                
             }
             
         }
